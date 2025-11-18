@@ -1,7 +1,5 @@
 "use strict";
 
-// ─────────────────────────────────────────────
-
 const codingQuestion = (function (start = 1, end = 15) {
   let current = start;
 
@@ -16,6 +14,8 @@ const codingQuestion = (function (start = 1, end = 15) {
   };
 })();
 console.log(codingQuestion.next());
+
+// ─────────────────────────────────────────────
 
 function one(input = "123") {
   // return +input + 7;
@@ -68,7 +68,7 @@ console.log(codingQuestion.next());
 
 function six(dayNumber) {
   // Validation
-  if (typeof dayNumber !== "number" || dayNumber < 1 || dayNumber > 7) {
+  if (dayNumber < 1 || dayNumber > 7) {
     return "Invalid Day Number!";
   }
 
