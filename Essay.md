@@ -1,31 +1,31 @@
-**`forEach`**
-
-- Execute a Callback For EACH Element.
-
-- CAN'T Use `await` Inside the Callback → It WON'T Pause Execution!
-
-- CAN'T Use `break` or `continue`.
-
-  ```js
-  arr.forEach(async (item) => {
-    await someAsyncOperation(item); // ALL Start Together
-  });
-  ```
-
-<br />
-
 **`for...of`**
 
 - Iterates Over Iterables (_Arrays, Strings, Maps, ...etc_).
 
-- Supports `await` → CAN Pause Execution for Async Operations.
-
 - CAN Use `break` and `continue`.
+
+- Supports `await` → CAN Pause Execution for Async Operations.
 
   ```js
   for (const item of array) {
     await someAsyncOperation(item); // Waits for EACH to Complete
   };
+  ```
+
+<br />
+
+**`forEach`**
+
+- Execute a Callback For EACH Element.
+
+- CAN'T Use `break` or `continue`.
+
+- CAN'T Use `await` Inside the Callback → It WON'T Pause Execution!
+
+  ```js
+  arr.forEach(async (item) => {
+    await someAsyncOperation(item); // ALL Start Together
+  });
   ```
 
 ---
@@ -60,7 +60,7 @@ const firstName = "Mohamed";
 try {
   throw new Error("Some Risky Operation...");
 } catch (error) {
-  // Handle the error
+  // Handle the Error
   console.log("Something Went Wrong:", error.message);
 } finally {
   // OPTIONAL
@@ -86,7 +86,7 @@ try {
 "10" - 0; // 10
 ```
 
-**Type Conversion** → The Developer EXPLICITLY Converts between Types.
+**Type Conversion** → The Developer EXPLICITLY Converts between Data Types.
 
 ```js
 Number.parseInt("16px"); // 16
