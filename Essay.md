@@ -25,7 +25,7 @@
   ```js
   for (const item of array) {
     await someAsyncOperation(item); // Waits for EACH to Complete
-  }
+  };
   ```
 
 ---
@@ -46,7 +46,7 @@ console.log(firstName); // RefrenceError
 const firstName = "Mohamed";
 ```
 
-> **T**emporal **D**ead **Z**one → Region Where a Variable Exists BUT is Inaccessible, and Any Attempt to Access it will Result in a `ReferenceError`.
+> **T**emporal **D**ead **Z**one → Region Where a Variable (_Declared with `let` and `const`_) Exists BUT is Inaccessible (_between the Beginning of the Scope and the Place Where the Variable is Declared_), and Any Attempt to Access it will Result in a `ReferenceError`.
 
 ---
 
@@ -70,15 +70,15 @@ try {
 
 **`try` Block Executes**
 
-- If NO Error → Continues After Catch
+- **If NO Error** → Continues after `catch`.
 
-- If error occurs → IMMEDIATELY Jumps to `catch`
+- **If Error Occurs** → IMMEDIATELY Jumps to `catch`.
 
-  > `finally` Block ALWAYS Executes (_Regardless of Error_)
+  > `finally` Block ALWAYS Executes (_Regardless of Error_).
 
 ---
 
-**Type Coercion** → JavaScript Implicitly Converts Between Data Types.
+**Type Coercion** → JavaScript IMPLICITLY Converts between Data Types.
 
 ```js
 1 + "2"; // 12
@@ -86,7 +86,7 @@ try {
 "10" - 0; // 10
 ```
 
-**Type Conversion** → The Developer Explicitly Converts Between Types.
+**Type Conversion** → The Developer EXPLICITLY Converts between Types.
 
 ```js
 Number.parseInt("16px"); // 16
